@@ -1,9 +1,11 @@
+document.addEventListener('DOMContentLoaded', (event) => {
+  document.getElementById('btn_create').addEventListener('click', createBoxes)
+  document.getElementById('btn_delete').addEventListener('click', deleteBoxes)
+})
+
 const controlsSpace = document.getElementById('controls')
 const bttnCreate = document.getElementById('btn_create')
 const bttnDelete = document.getElementById('btn_delete')
-
-console.log(bttnCreate)
-console.log(bttnDelete)
 
 function createBoxes() {
   const inputArea = document.querySelector('#input_one').value
@@ -37,20 +39,3 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`
 }
-
-// function deleteBoxes() {
-//   const container = document.getElementById("boxes");
-//   // Pobierz wszystkie dzieci kontenera
-//   const children = Array.from(container.children);
-//   console.log(children);
-//   // Iteruj po dzieciach i usuwaj każde z nich
-//   children.forEach((child) => {
-//     container.removeChild(child);
-//   });
-// }
-
-// function test1() {
-//   console.log("Witaj!!");
-// }
-
-//bttnCreate.addEventListener("click", createBoxes);
